@@ -6,6 +6,13 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-dark-gray: #a1a1a1;
+    --color-mine-shaft: #333333;
+    --color-vibrant-green: #05DF05;
+
+    --fuente-merriweather: 'Merriweather', serif;
+    --fuente-inter: 'Inter', sans-serif;
 }
 
 /* Estilos generales */
@@ -36,14 +43,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    /* padding: 40px 0 0; */
+    padding: 2% 0% 0% 15%;
 }
 
 /* Sección de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
+    border: 1px solid var(--color-black);
     border-radius: 64px 64px 0 0;
     display: flex;
     flex-direction: column;
@@ -55,7 +63,7 @@ body {
 /* Títulos */
 .main-title {
     font-size: 48px;
-    font-family: "Merriweather", serif;
+    font-family: var(--fuente-merriweather);
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
@@ -82,7 +90,7 @@ body {
 .input-name {
     width: 100%;
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-black);
     border-radius: 25px 0 0 25px;
     font-size: 16px;
 }
@@ -97,19 +105,19 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid var(--color-mine-shaft);
     border-right: none;
     border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
+    font-family: var(--fuente-merriweather);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inter);
     font-size: 16px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-black);
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -122,21 +130,21 @@ button {
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-dark-gray);
 }
 
 /* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente-inter);
     font-size: 18px;
     margin: 20px 0;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: var(--color-vibrant-green);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -162,7 +170,10 @@ ul {
 }
 
 @media (max-width: 1200px ){
+    .header-banner {
+        padding: 10%; 
+    }
     .header-imagen {
-        width: 50%;
+        width: 40%;
     }
 }
